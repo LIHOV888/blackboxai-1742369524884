@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freepik Scraper & Downloader</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="max-w-4xl mx-auto p-6">
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+            <div class="flex items-center gap-3 mb-6">
+                <i class="fas fa-download text-blue-600 text-2xl"></i>
+                <h1 class="text-2xl font-semibold text-gray-800">Freepik Scraper & Downloader</h1>
+            </div>
+
+            <div class="mb-6">
+                <label class="block text-sm font-medium text-gray-700 mb-2">URL:</label>
+                <div class="flex gap-2">
+                    <input type="text" id="urlInput" placeholder="Enter Freepik URL (e.g., https://www.freepik.com/...)" 
+                           class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <button id="startBtn" class="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition-colors flex items-center gap-2">
+                        <i class="fas fa-play"></i>
+                        <span>Start</span>
+                    </button>
+                    <button id="stopBtn" class="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition-colors flex items-center gap-2">
+                        <i class="fas fa-stop"></i>
+                        <span>Stop</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex gap-4 mb-6">
+                <button id="loadTemplateBtn" class="flex-1 px-4 py-3 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition-colors flex items-center justify-center gap-2">
+                    <i class="fas fa-file-import"></i>
+                    <span>Load Template</span>
+                </button>
+                <button id="startDownloadBtn" class="flex-1 px-4 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors flex items-center justify-center gap-2">
+                    <i class="fas fa-cloud-download-alt"></i>
+                    <span>Start Download</span>
+                </button>
+                <button id="stopDownloadBtn" class="flex-1 px-4 py-3 bg-red-500 text-white rounded-md hover:bg-red-600 transition-colors flex items-center justify-center gap-2">
+                    <i class="fas fa-ban"></i>
+                    <span>Stop Download</span>
+                </button>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-4">
+                <pre id="output" class="whitespace-pre-wrap text-sm font-mono text-gray-700">Ready to start...</pre>
+            </div>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>
